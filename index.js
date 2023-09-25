@@ -53,7 +53,7 @@ let userLocks = {};
 let token = process.env.TOKEN
 let bot = new TelegramBot(token, { polling: true })
 // Bot Settings
-let botName = 'Social Media Dowloader Bot';
+let botName = 'Nezuko Social Bot';
 app.get('/', async (req, res) => {
   res.send({
     Status: "Active"
@@ -69,11 +69,11 @@ bot.onText(/\/start/, async (msg) => {
   let chatId = msg.chat.id;
   if (!db[chatId]) {
     await addUserDb(chatId, './database.json');
-    let response = `Hello I am ${botName},You only need to send the video / audio link then the bot will process it, This bot only supports downloading the following link!\n\n• Youtube\n• Tiktok\n• Instagram\n• Twitter\n• Facebook\n• Pinterest\n• Spotify\n\nBot by @Krxuvv`
+    let response = `Hello I am ${botName},You only need to send the video / audio link then the bot will process it, This bot only supports downloading the following link!\n\n• Youtube\n• Tiktok\n• Instagram\n• Twitter\n• Facebook\n• Pinterest\n• Spotify\n\nBot by @firespower`
     await bot.sendMessage(chatId, response);
     db = await readDb('./database.json');
   } else if (db[chatId]) {
-    let response = `Hello I am ${botName},You only need to send the video / audio link then the bot will process it, This bot only supports downloading the following link!\n\n• Youtube\n• Tiktok\n• Instagram\n• Twitter\n• Facebook\n• Pinterest\n• Spotify\n\nBot by @Krxuvv`
+    let response = `Hello I am ${botName},You only need to send the video / audio link then the bot will process it, This bot only supports downloading the following link!\n\n• Youtube\n• Tiktok\n• Instagram\n• Twitter\n• Facebook\n• Pinterest\n• Spotify\n\nBot by @firespower`
     await bot.sendMessage(chatId, response);
   }
 })
