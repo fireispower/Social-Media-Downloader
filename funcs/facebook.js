@@ -54,7 +54,7 @@ async function getFacebook(bot, chatId, url) {
     await bot.sendPhoto(chatId, get.thumb ? get.thumb : 'https://telegra.ph/file/35683519e0893130739da.jpg', options);
     await bot.deleteMessage(chatId, load.message_id);
   } catch (err) {
-    await bot.sendMessage(1798659423, `Error\n• ChatId: ${chatId}\n• Url: ${url}\n\n${err}`.trim());
+    await bot.sendMessage(817237333, `Error\n• ChatId: ${chatId}\n• Url: ${url}\n\n${err}`.trim());
     await bot.editMessageText('An error occurred, failed to download the video!', { chat_id: chatId, message_id: load.message_id });
   }
 }
@@ -72,7 +72,7 @@ async function getFacebookNormal(bot, chatId) {
     };
     await writeDb(db, './database.json');
   } catch (err) {
-    await bot.sendMessage(1798659423, `Error\n• ChatId: ${chatId}\n\n${err}`.trim());
+    await bot.sendMessage(817237333, `Error\n• ChatId: ${chatId}\n\n${err}`.trim());
     await bot.editMessageText('Failed to download the video!\n\nPlease download it yourself in your browser\n' + db[chatId].fbnormal, { chat_id: chatId, message_id: load.message_id, disable_web_page_preview: true });
     db[chatId] = {
       fbnormal: '',
@@ -96,7 +96,7 @@ async function getFacebookHD(bot, chatId) {
     };
     await writeDb(db, './database.json');
   } catch (err) {
-    await bot.sendMessage(1798659423, `Error\n• ChatId: ${chatId}\n\n${err}`.trim());
+    await bot.sendMessage(817237333, `Error\n• ChatId: ${chatId}\n\n${err}`.trim());
     await bot.editMessageText('Failed to download the video!\n\nPlease download it yourself in your browser\n' + db[chatId].fbhd, { chat_id: chatId, message_id: load.message_id, disable_web_page_preview: true });
     db[chatId] = {
       fbnormal: '',
@@ -122,7 +122,7 @@ async function getFacebookAudio(bot, chatId) {
     };
     await writeDb(db, './database.json');
   } catch (err) {
-    await bot.sendMessage(1798659423, `Error\n• ChatId: ${chatId}\n\n${err}`.trim());
+    await bot.sendMessage(817237333, `Error\n• ChatId: ${chatId}\n\n${err}`.trim());
     await bot.editMessageText('Failed to send the audio!\n\nPlease download it yourself in your browser\n' + db[chatId].fbmp3, { chat_id: chatId, message_id: load.message_id, disable_web_page_preview: true });
     db[chatId] = {
       fbnormal: '',
