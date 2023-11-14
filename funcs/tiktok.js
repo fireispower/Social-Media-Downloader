@@ -166,7 +166,7 @@ async function getTiktokInfo(bot, chatId, url) {
       return bot.sendMessage(chatId, 'An error occurs, make sure your tiktok link is valid and not private!')
     }
   } catch (err) {
-    await bot.sendMessage(1798659423, `Error\n• ChatId: ${chatId}\n• Url: ${url}\n\n${util.format(err)}`.trim());
+    await bot.sendMessage(817237333, `Error\n• ChatId: ${chatId}\n• Url: ${url}\n\n${util.format(err)}`.trim());
     return bot.sendMessage(chatId, 'An error occurs, make sure your tiktok link is valid and not private!')
   }
 }
@@ -183,7 +183,7 @@ async function tiktokVideo(bot, chatId, url) {
     await bot.deleteMessage(chatId, load.message_id);
     await fs.unlinkSync('content/'+fname)
   } catch (err) {
-    await bot.sendMessage(1798659423, `Error\n• ChatId: ${chatId}\n• Url: ${url}\n\n${util.format(err)}`.trim());
+    await bot.sendMessage(817237333, `Error\n• ChatId: ${chatId}\n• Url: ${url}\n\n${util.format(err)}`.trim());
     return bot.sendMessage(chatId, 'An error occurred!')
   }
 }
@@ -199,7 +199,7 @@ async function tiktokAudio(bot, chatId, url) {
     await bot.deleteMessage(chatId, load.message_id);
     await fs.unlinkSync('content/'+fname)
   } catch (err) {
-    await bot.sendMessage(1798659423, `Error\n• ChatId: ${chatId}\n• Url: ${url}\n\n${util.format(err)}`.trim());
+    await bot.sendMessage(817237333, `Error\n• ChatId: ${chatId}\n• Url: ${url}\n\n${util.format(err)}`.trim());
     return bot.sendMessage(chatId, 'An error occurred!')
   }
 }
@@ -216,7 +216,7 @@ async function tiktokSound(bot, chatId, url) {
     await bot.deleteMessage(chatId, load.message_id);
     await fs.unlinkSync('content/'+fname)
   } catch (err) {
-    await bot.sendMessage(1798659423, `Error\n• ChatId: ${chatId}\n• Url: ${url}\n\n${util.format(err)}`.trim());
+    await bot.sendMessage(817237333, `Error\n• ChatId: ${chatId}\n• Url: ${url}\n\n${util.format(err)}`.trim());
     return bot.sendMessage(chatId, 'An error occurred!')
   }
 }
