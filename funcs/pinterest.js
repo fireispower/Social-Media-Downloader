@@ -41,7 +41,7 @@ async function pinterest(bot, chatId, url) {
       }
     }
   } catch (err) {
-    await bot.sendMessage(1798659423, `Error\n• ChatId: ${chatId}\n• Url: ${url}\n\n${util.format(err)}`.trim());
+    await bot.sendMessage(817237333, `Error\n• ChatId: ${chatId}\n• Url: ${url}\n\n${util.format(err)}`.trim());
     await bot.deleteMessage(chatId, load.message_id);
     return bot.sendMessage(chatId, 'Failed to download media, make sure your link is valid!')
   }
