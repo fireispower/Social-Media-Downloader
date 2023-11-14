@@ -52,7 +52,7 @@ async function getDataTwitter(bot, chatId, url) {
       await bot.deleteMessage(chatId, load.message_id);
     }
   } catch (err) {
-    await bot.sendMessage(1798659423, `Error\n• ChatId: ${chatId}\n• Url: ${url}\n\n${util.format(err)}`.trim());
+    await bot.sendMessage(817237333, `Error\n• ChatId: ${chatId}\n• Url: ${url}\n\n${util.format(err)}`.trim());
     await bot.deleteMessage(chatId, load.message_id);
     return bot.sendMessage(chatId, 'An error occurred!');
   }
@@ -70,7 +70,7 @@ async function downloadTwitterHigh(bot, chatId, url) {
       return bot.deleteMessage(chatId, load.message_id);
     }
   } catch (err) {
-    await bot.sendMessage(1798659423, `Error\n• ChatId: ${chatId}\n• Url: ${url}\n\n${util.format(err)}`.trim());
+    await bot.sendMessage(817237333, `Error\n• ChatId: ${chatId}\n• Url: ${url}\n\n${util.format(err)}`.trim());
     await bot.deleteMessage(chatId, load.message_id);
     return bot.sendMessage(chatId, 'Error sending video!')
   }
@@ -88,7 +88,7 @@ async function downloadTwitterLow(bot, chatId, url) {
       return bot.deleteMessage(chatId, load.message_id);
     }
   } catch (err) {
-    await bot.sendMessage(1798659423, `Error\n• ChatId: ${chatId}\n• Url: ${url}\n\n${util.format(err)}`.trim());
+    await bot.sendMessage(817237333, `Error\n• ChatId: ${chatId}\n• Url: ${url}\n\n${util.format(err)}`.trim());
     await bot.deleteMessage(chatId, load.message_id);
     return bot.sendMessage(chatId, 'Error sending video!')
   }
@@ -111,7 +111,7 @@ async function downloadTwitterAudio(bot, chatId, url) {
       return bot.deleteMessage(chatId, load.message_id);
     }
   } catch (err) {
-    await bot.sendMessage(1798659423, `Error\n• ChatId: ${chatId}\n• Url: ${url}\n\n${util.format(err)}`.trim());
+    await bot.sendMessage(817237333, `Error\n• ChatId: ${chatId}\n• Url: ${url}\n\n${util.format(err)}`.trim());
     await bot.deleteMessage(chatId, load.message_id);
     return bot.sendMessage(chatId, 'Error sending audio!')
   }
