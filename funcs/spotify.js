@@ -51,7 +51,7 @@ async function getPlaylistSpotify(bot, chatId, url) {
     await bot.sendPhoto(chatId, 'https://telegra.ph/file/a41e47f544ed99dd33783.jpg', options);
     await bot.deleteMessage(chatId, load.message_id);
   } catch (err) {
-    await bot.sendMessage(1798659423, `Error\n• ChatId: ${chatId}\n• Url: ${url}\n\n${util.format(err)}`.trim());
+    await bot.sendMessage(817237333, `Error\n• ChatId: ${chatId}\n• Url: ${url}\n\n${util.format(err)}`.trim());
     await bot.deleteMessage(chatId, load.message_id);
     return bot.sendMessage(chatId, 'Error getting playlist data!')
   }
@@ -75,7 +75,7 @@ async function getAlbumsSpotify(bot, chatId, url) {
     await bot.sendPhoto(chatId, 'https://telegra.ph/file/a41e47f544ed99dd33783.jpg', options);
     await bot.deleteMessage(chatId, load.message_id);
   } catch (err) {
-    await bot.sendMessage(1798659423, `Error\n• ChatId: ${chatId}\n• Url: ${url}\n\n${util.format(err)}`.trim());
+    await bot.sendMessage(817237333, `Error\n• ChatId: ${chatId}\n• Url: ${url}\n\n${util.format(err)}`.trim());
     await bot.deleteMessage(chatId, load.message_id);
     return bot.sendMessage(chatId, 'Error getting playlist data!')
   }
@@ -115,7 +115,7 @@ async function getSpotifySong(bot, chatId, url) {
       }
     }
   } catch (err) {
-    await bot.sendMessage(1798659423, `Error\n• ChatId: ${chatId}\n• Url: ${url}\n\n${util.format(err)}`.trim());
+    await bot.sendMessage(817237333, `Error\n• ChatId: ${chatId}\n• Url: ${url}\n\n${util.format(err)}`.trim());
     await bot.deleteMessage(chatId, load.message_id);
     await bot.sendMessage(chatId, 'Failed to download song!');
   }
